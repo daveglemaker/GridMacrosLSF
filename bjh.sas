@@ -1,0 +1,41 @@
+%macro bjh(user=%sysget(USER));
+filename bjobsl pipe "bjobs -l -u &user";
+data bjobsl(keep=jobid cputime status);
+   retain jobid;
+   format  jobid $10. var1 $50. var2 $50. var3 $50. var4 $50. var5 $50. var6 $30. temp 10. status $6.;
+   infile bjobsl delimiter=" " truncover;
+   input var1 var2 var3 var4 var5 var6 $30.;
+   if substr(var2,1,1)="<" and substr(var1,1,3)="Job" then do; 
+      jobid=compress(substr(var2,2),",>");
+   end;
+   else if substr(var2,1,3)="CPU" then do; 
+      temp=compress(substr(var6,1),"s e c o n d s .");
+      cputime=sum(0,temp);
+      status="RUN";
+      output;
+   end;
+run;
+
+filename bhist pipe "bhist -u &user";
+data bhist(keep=jobid runtime);
+   format  jobid $10. var1 $50. var2 $50. var3 $50. var4 $50. var5 $50. var6 $30.;
+   infile bhist delimiter=" " truncover;
+   input var1 var2 var3 var4 var5 var6;
+   if _n_>2 and var1 ne " ";
+   jobid=compress(var1);
+   runtime=sum(0,var6);
+run;
+ 
+data bjh;
+   merge bjobsl bhist; 
+   by jobid;
+run;
+data bjh;
+   set bjh; format hog percent12.2;
+   hog=cputime/runtime;
+run;
+title "&user Runtime by JOBID";
+proc print data=bjh;
+run;
+%mend bjh;
+
