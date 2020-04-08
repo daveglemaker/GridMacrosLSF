@@ -1,4 +1,4 @@
-# SAS Grid Manager CLI and SASGSUB Macros
+# SAS Grid Manager for Platform LSF-CLI and SASGSUB Macros
            SAS version: SAS 9.4M4 SAS Grid Manager 
 
 Usage and Setup in "SAS Grid and Gsub Macros 2018" powerpoint file
