@@ -1,4 +1,4 @@
-%macro sbhist(jobid=all);
+%macro sbhist(jobid=);
 options linesize=max ;
 filename cmdout pipe "bhist -l &jobid" LRECL=2000;
 
