@@ -1,4 +1,4 @@
-%macro bhist(jobid=all);
+%macro bhist(jobid=);
 options linesize=max ;
 filename cmdout pipe "bhist -l &jobid" LRECL=2000;
 
