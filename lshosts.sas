@@ -32,7 +32,7 @@ label cpuf="CPU Factor"
       ncpu="Number CPU";
 run;
 title "lshosts Listing";
-&fn footnote '<img title="PoweredBySAS-ColorHorizontal" class="cq-dd-image" alt="PoweredBySAS-ColorHorizontal" src="https://brand.sas.com/en/home/our-identity/visual-elements/logo/_jcr_content/par/styledcontainer_1011938127/par/image_2006980209.img.png/1549480759537.png">';
+&fn footnote '<img title="PoweredBySAS-ColorHorizontal" class="cq-dd-image" alt="PoweredBySAS-ColorHorizontal" src="https://brand.sas.com/en/home/brand-assets/design-elements/logos/_jcr_content/par/styledcontainer_1011938127/par/image_2006980209.img.png/1549480759537.png">';
 proc print data=lshosts label;
   var HostName type model cpuf ncpu maxmem maxswp server resources; 
 run;
