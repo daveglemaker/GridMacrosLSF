@@ -22,7 +22,7 @@ Usage and Setup in "SAS Grid and Gsub Macros 2018" powerpoint file
     repeat for each server context as desired, i.e. Server context = SASApp  
     
 2. Edit ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/appserver_autoexec_usermods.sas with code below for mygsub macros to work
-   change "Yourconfigdir" to your actual configuration directory and "sasgridswomasterhost" to your master host name.
+   change "Yourconfigdir" to your actual configuration directory.
 
            %let gsconfigdir=/Yourconfigdir/Lev1/Applications/SASGridManagerClientUtility/9.4;  
            
