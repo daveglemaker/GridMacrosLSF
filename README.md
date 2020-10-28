@@ -24,8 +24,8 @@ Usage and Setup in "SAS Grid and Gsub Macros 2018" powerpoint file
 2. Edit ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/appserver_autoexec_usermods.sas with code below for mygsub macros to work
    change "Yourconfigdir" to your actual configuration directory and "sasgridswomasterhost" to your master host name.
 
-    %let gsconfigdir=/Yourconfigdir/Lev1/Applications/SASGridManagerClientUtility/9.4;  
-
+           %let gsconfigdir=/Yourconfigdir/Lev1/Applications/SASGridManagerClientUtility/9.4;  
+           
 ### SMC setup
 #### Enable xcmd, repeat for each server context desired, i.e. Server context = SASApp
  In SAS Management Console enable xcmd on Logical Workspace Server:
