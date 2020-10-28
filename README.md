@@ -18,8 +18,13 @@ Usage and Setup in "SAS Grid and Gsub Macros 2018" powerpoint file
 - %egoshl and %egoshv – reports EGO service list and individual services information
 
 ## Install Steps
-Copy all .sas Files to ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/SASEnvironment/SASMacro
-    repeat for each server context as desired, i.e. Server context = SASApp
+1. Copy all .sas Files to ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/SASEnvironment/SASMacro
+    repeat for each server context as desired, i.e. Server context = SASApp  
+    
+2. Edit ...SASCOMPUTECONFIGDIR.../Lev1/SASApp/appserver_autoexec_usermods.sas with code below for mygsub macros to work
+   change "Yourconfigdir" to your actual configuration directory and "sasgridswomasterhost" to your master host name.
+
+    %let gsconfigdir=/Yourconfigdir/Lev1/Applications/SASGridManagerClientUtility/9.4;  
 
 ### SMC setup
 #### Enable xcmd, repeat for each server context desired, i.e. Server context = SASApp
