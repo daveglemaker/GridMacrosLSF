@@ -4,7 +4,7 @@
 Usage and Setup in "SAS Grid and Gsub Macros 2018" powerpoint file
 
 # Macros for the SAS User Role
-- %mygsub %mygsubnight %mygsubpri 
+- %mygsub %mygsubnight %mygsubpri – submit a batch job with sasgsub to the default, night and priority queue
 - %gjobs and %gsstatus – reports on job status
 - %gsresults – move job results to a different directory
 - %gskill – terminate a gsub job
