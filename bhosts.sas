@@ -33,7 +33,7 @@ label jobsperuser="Jobs Per User"
       numjobs="Num Jobs";
    run;
 title "Bhosts Listing";
-&fn footnote '<img title="PoweredBySAS-ColorHorizontal" class="cq-dd-image" alt="PoweredBySAS-ColorHorizontal" src="https://brand.sas.com/en/home/brand-assets/design-elements/logos/_jcr_content/par/styledcontainer_1011938127/par/image_2006980209.img.png/1549480759537.png">';
+* footnote '<img title="PoweredBySAS-ColorHorizontal" class="cq-dd-image" alt="PoweredBySAS-ColorHorizontal" src="https://brand.sas.com/en/home/brand-assets/design-elements/logos/_jcr_content/par/styledcontainer_1011938127/par/image_2006980209.img.png/1549480759537.png">';
 proc print data=bhosts label;
 run;
 title;footnote;
