@@ -35,7 +35,7 @@ data mygsubjob;
    if substr(info2,1,1) not in (" ") then info=compress(info)||":"||compress(info2);
 run;
 title "My SASGSUB Job";
-&fn footnote '<img title="PoweredBySAS-ColorHorizontal" class="cq-dd-image" alt="PoweredBySAS-ColorHorizontal" src="https://brand.sas.com/en/home/brand-assets/design-elements/logos/_jcr_content/par/styledcontainer_1011938127/par/image_2006980209.img.png/1549480759537.png">';
+* &fn footnote '<img title="PoweredBySAS-ColorHorizontal" class="cq-dd-image" alt="PoweredBySAS-ColorHorizontal" src="https://brand.sas.com/en/home/brand-assets/design-elements/logos/_jcr_content/par/styledcontainer_1011938127/par/image_2006980209.img.png/1549480759537.png">';
 proc print data=mygsubjob; where info ne " ";
 var job info;
 run;
